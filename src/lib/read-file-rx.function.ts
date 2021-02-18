@@ -3,6 +3,7 @@ import { Subject } from 'rxjs';
 
 export const readFileRx = (path: string) => {
     const s = new Subject<string>();
+
     readFile(path, {encoding: 'utf8'}, (err, data) => {
         if (err) {
             s.error(err);
