@@ -1,5 +1,7 @@
 import { readFileRx } from './read-file-rx.function';
 
+const fail = () => { throw new Error('fail!') };
+
 describe('readFileRx', () => {
     describe('GIVEN the file path exists', () => {
         it('emits the file contents', (done) => {
