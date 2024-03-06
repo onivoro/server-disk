@@ -4,7 +4,7 @@ import { existsSync } from 'node:fs';
 
 describe('writeBufferToDisk', () => {
   it('worx', async () => {
-    const where = 'test/test.txt';
+    const where = 'test.txt';
 
     // precondition
     expect(existsSync(where)).toBe(false);
