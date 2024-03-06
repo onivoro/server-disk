@@ -1,22 +1,42 @@
 {
-  "name": "@onivoro/server-disk",
-  "version": "0.3.0",
-  "repository": {
-    "url": "https://github.com/onivoro/server-disk.git"
-  },
-  "scripts": {
-    "test": "jest",
-    "build": "tsc -p tsconfig.json",
-    "release": "rm -rf dist && npm run build && npm version minor && cp package.json dist && cd dist && npm publish --access public"
-  },
-  "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.7",
-    "jest": "^27.3.1",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
-  },
-  "dependencies": {
-    "rxjs": "^7.5.5"
-  }
+    "name": "@onivoro/server-disk",
+    "version": "0.3.5",
+    "repository": {
+        "url": "git+https://github.com/onivoro/server-disk.git"
+    },
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/types/index.d.ts",
+    "files": [
+        "dist/*"
+    ],
+    "scripts": {
+        "onx": "onx",
+        "build": "onx Build",
+        "deploy": "onx Publish",
+        "test": "onx Test",
+        "update": "onx Update"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "require": "./dist/cjs/index.js",
+            "import": "./dist/esm/index.js",
+            "default": "./dist/esm/lib.js"
+        }
+    },
+    "onx": {
+        "platform": "server",
+        "module": "commonjs"
+    },
+    "devDependencies": {
+        "@onivoro/cli": "*",
+        "@types/jest": "*",
+        "@types/node": "18.19",
+        "typescript": "*"
+    },
+    "engines": {
+        "node": "18.19.1",
+        "npm": "10.2.4"
+    }
 }
