@@ -1,6 +1,6 @@
 {
     "name": "@onivoro/server-disk",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "repository": {
         "url": "git+https://github.com/onivoro/server-disk.git"
     },
