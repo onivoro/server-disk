@@ -40,6 +40,6 @@
         "npm": "10.9.0"
     },
     "dependencies": {
-        "@onivoro/server-process": "^22.0.0"
+        "@onivoro/server-process": "^22.0.1"
     }
 }
