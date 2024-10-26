@@ -2,7 +2,7 @@ import { createReadStream } from 'fs';
 import * as readline from 'readline';
 import { Observable } from 'rxjs';
 
-export function streamFileRx(path: string, enc) {
+export function streamFileRx(path: string, enc: BufferEncoding) {
   return new Observable<string>(o => {
     const readInterface = readline.createInterface({
       input: createReadStream(path, enc),
